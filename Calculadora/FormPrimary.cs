@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Calculadora
+{
+    public partial class FormPrimary : Form
+    {
+        public FormPrimary()
+        {
+            InitializeComponent();
+        }
+
+        private void abrirFormatoHija(object FormatoHija)
+        {
+            if (panelContainer.Controls.Count > 0)
+                panelContainer.Controls.RemoveAt(0);
+
+            Form formatohija = FormatoHija as Form;
+            formatohija.TopLevel = false;
+            formatohija.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(formatohija);
+            panelContainer.Tag = formatohija;
+            formatohija.Show();
+
+        }
+
+        private void buttonSimple_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new FormSimple());
+        }
+
+        private void panelPrimary_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonCompuesto_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new FormCompuesto());
+        }
+    }
+}
