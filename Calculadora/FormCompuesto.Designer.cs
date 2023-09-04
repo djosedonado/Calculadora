@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxAños = new System.Windows.Forms.TextBox();
             this.textBoxMeses = new System.Windows.Forms.TextBox();
             this.textBoxDias = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.labelTasaInteres = new System.Windows.Forms.Label();
             this.textBoxTasaInteres = new System.Windows.Forms.TextBox();
             this.labelTiempo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,12 +74,25 @@
             this.panelPrincipal.Size = new System.Drawing.Size(977, 576);
             this.panelPrincipal.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(297, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 24);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Interes Compuesto";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // textBoxAños
             // 
             this.textBoxAños.Location = new System.Drawing.Point(145, 240);
             this.textBoxAños.Name = "textBoxAños";
             this.textBoxAños.Size = new System.Drawing.Size(69, 20);
             this.textBoxAños.TabIndex = 37;
+            this.textBoxAños.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAños_KeyPress);
             // 
             // textBoxMeses
             // 
@@ -87,6 +100,7 @@
             this.textBoxMeses.Name = "textBoxMeses";
             this.textBoxMeses.Size = new System.Drawing.Size(69, 20);
             this.textBoxMeses.TabIndex = 36;
+            this.textBoxMeses.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMeses_KeyPress);
             // 
             // textBoxDias
             // 
@@ -94,6 +108,7 @@
             this.textBoxDias.Name = "textBoxDias";
             this.textBoxDias.Size = new System.Drawing.Size(69, 20);
             this.textBoxDias.TabIndex = 35;
+            this.textBoxDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDias_KeyPress);
             // 
             // labelValor
             // 
@@ -166,6 +181,7 @@
             this.textBoxValorFinal.Name = "textBoxValorFinal";
             this.textBoxValorFinal.Size = new System.Drawing.Size(108, 20);
             this.textBoxValorFinal.TabIndex = 27;
+            this.textBoxValorFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxValorFinal_KeyPress);
             // 
             // labelValorIncial
             // 
@@ -182,6 +198,7 @@
             this.textBoxValorIncial.Name = "textBoxValorIncial";
             this.textBoxValorIncial.Size = new System.Drawing.Size(108, 20);
             this.textBoxValorIncial.TabIndex = 25;
+            this.textBoxValorIncial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxValorIncial_KeyPress);
             // 
             // labelTasaInteres
             // 
@@ -198,6 +215,7 @@
             this.textBoxTasaInteres.Name = "textBoxTasaInteres";
             this.textBoxTasaInteres.Size = new System.Drawing.Size(108, 20);
             this.textBoxTasaInteres.TabIndex = 23;
+            this.textBoxTasaInteres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTasaInteres_KeyPress);
             // 
             // labelTiempo
             // 
@@ -207,18 +225,6 @@
             this.labelTiempo.Size = new System.Drawing.Size(42, 13);
             this.labelTiempo.TabIndex = 22;
             this.labelTiempo.Text = "Tiempo";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(297, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 24);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Interes Compuesto";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FormCompuesto
             // 

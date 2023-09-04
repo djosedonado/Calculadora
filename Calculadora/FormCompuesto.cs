@@ -53,7 +53,37 @@ namespace Calculadora
 
         private void label1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void textBoxDias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 1);
+        }
+
+        private void textBoxMeses_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 1);
+        }
+
+        private void textBoxAños_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 1);
+        }
+
+        private void textBoxTasaInteres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
+        }
+
+        private void textBoxValorIncial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
+        }
+
+        private void textBoxValorFinal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
         }
     }
 }

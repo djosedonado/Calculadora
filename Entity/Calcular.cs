@@ -8,6 +8,17 @@ namespace Entity
 {
     public class Calcular : Intereses
     {
+        public double CalcularInteresCompuesto()
+        {
+            return 0;
+        }
+
+        private double MontoCompuesto()
+        {
+
+            return ValorInicial * (1 + (interes / 100))
+        }
+
 
         public double CalcularInteresSimple() 
         {
