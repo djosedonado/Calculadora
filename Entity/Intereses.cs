@@ -10,7 +10,6 @@ namespace Entity
     {
         public Intereses() 
         {
-            tiempo = 0;
             interes = 0;
             ValorFinal = 0;
             ValorInicial = 0;
@@ -19,7 +18,6 @@ namespace Entity
             meses = 0;
             años = 0;
         }
-        public int tiempo { get; set; }
         public double interes { get; set; }
         public double ValorInicial { get; set; }
         public double ValorFinal { get; set; }

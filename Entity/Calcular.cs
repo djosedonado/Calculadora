@@ -70,6 +70,10 @@ namespace Entity
                         {
                             if(dias != 0)
                             {
+                                if (ValorInicial != 0 && interes != 0)
+                                {
+                                    return calcularValorFianlPorDias();
+                                }
                                 return Resultado = 5;
                             }
                             else
@@ -114,6 +118,11 @@ namespace Entity
             }
 
             return calcularTiempo();
+        }
+
+        private double calcularValorFianlPorDias()
+        {
+            return ValorInicial * ((interes / 100)/ 365) * dias;
         }
 
         private double calcularValorFuturoPorAñosYMeses()
