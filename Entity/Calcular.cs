@@ -16,7 +16,7 @@ namespace Entity
         private double MontoCompuesto()
         {
 
-            return ValorInicial * (1 + (interes / 100))
+            return ValorInicial * (1 + (interes / 100));
         }
 
 
