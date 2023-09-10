@@ -22,6 +22,63 @@ namespace Calculadora
             calcular = new InteresSimple();
             CamposInicio();
         }
+
+        private void VariablesEntradas()
+        {
+            if (comboBoxSelector.Text.Equals("Diario"))
+            {
+                calcular.dias = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Mensual"))
+            {
+                calcular.meses = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Anual"))
+            {
+                calcular.años = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Diario-Mensual-Anual"))
+            {
+                calcular.dias = int.Parse(textBoxDias.Text);
+                calcular.meses = int.Parse(textBoxMeses.Text);
+                calcular.años = int.Parse(textBoxAños.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Trimestral"))
+            {
+                calcular.Trimestral = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Cuatrimestral"))
+            {
+                calcular.Cuatrimestral = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+            if (comboBoxSelector.Text.Equals("Semestral"))
+            {
+                calcular.Semestral = int.Parse(textBoxDias.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+            }
+
+        }
+
         private void CamposInicio()
         {
             textBoxTasaInteres.Text = "0";
@@ -84,6 +141,80 @@ namespace Calculadora
         private void textBoxValorFinal_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacionCampos.validacion(e, 2);
+        }
+
+        private void comboBoxSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSelector.Text.Equals("Diario"))
+            {
+                labelDias.Text = "Diario";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
+            if (comboBoxSelector.Text.Equals("Mensual"))
+            {
+                labelDias.Text = "Mensual";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
+            if (comboBoxSelector.Text.Equals("Anual"))
+            {
+                labelDias.Text = "Anual";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
+            if (comboBoxSelector.Text.Equals("Diario-Mensual-Anual"))
+            {
+                labelDias.Text = "Diario";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = true;
+                textBoxAños.Visible = true;
+                labelDias.Visible = true;
+                labelMeses.Visible = true;
+                labelAños.Visible = true;
+            }
+            if (comboBoxSelector.Text.Equals("Trimestral"))
+            {
+                labelDias.Text = "Trimestral";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
+            if (comboBoxSelector.Text.Equals("Cuatrimestral"))
+            {
+                labelDias.Text = "Cuatrimestral";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
+            if (comboBoxSelector.Text.Equals("Semestral"))
+            {
+                labelDias.Text = "Semestral";
+                textBoxDias.Visible = true;
+                textBoxMeses.Visible = false;
+                textBoxAños.Visible = false;
+                labelDias.Visible = true;
+                labelMeses.Visible = false;
+                labelAños.Visible = false;
+            }
         }
     }
 }
