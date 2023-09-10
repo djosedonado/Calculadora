@@ -98,6 +98,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "button1";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -108,6 +109,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // buttonCompuesto
             // 

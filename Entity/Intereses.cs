@@ -10,21 +10,19 @@ namespace Entity
     {
         public Intereses() 
         {
-            interes = 0;
-            ValorFinal = 0;
-            ValorInicial = 0;
-            Resultado = 0;
+            TasaDeInteres = 0;
+            CapitalInicial = 0;
+            Interes = 0;
             dias = 0;
             meses = 0;
             años = 0;
         }
-        public double interes { get; set; }
-        public double ValorInicial { get; set; }
-        public double ValorFinal { get; set; }
-        public double Resultado { get; set; }
-        public int dias { get; set; }
-        public int meses { get; set; }
-        public int años { get; set; }
+        public float TasaDeInteres { get; set; }
+        public float CapitalInicial { get; set; }
+        public float Interes { get; set; }
+        public float dias { get; set; }
+        public float meses { get; set; }
+        public float años { get; set; }
 
     }
 }

@@ -15,12 +15,12 @@ namespace Calculadora
     public partial class FormSimple : Form
     {
         public ValidacionCampos validacionCampos;
-        public Calcular calcular;
+        public InteresSimple calcular;
         public FormSimple()
         {
             InitializeComponent();
             validacionCampos = new ValidacionCampos();
-            calcular = new Calcular();
+            calcular = new InteresSimple();
             CamposInicio();
         }
         private void CamposInicio()
@@ -60,11 +60,11 @@ namespace Calculadora
                 calcular.dias = int.Parse(textBoxDias.Text);
                 calcular.meses = int.Parse(textBoxMeses.Text);
                 calcular.años = int.Parse(textBoxAños.Text);
-                calcular.interes = double.Parse(textBoxTasaInteres.Text);
-                calcular.ValorInicial = double.Parse(textBoxValorIncial.Text);
-                calcular.ValorFinal = double.Parse(textBoxValorFinal.Text);
+                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+                calcular.Interes = float.Parse(textBoxValorFinal.Text);
                 labelValor.Visible = true;
-                labelValor.Text = calcular.CalcularInteresSimple().ToString();
+                labelValor.Text = (calcular.CalcularInteresSimple());
             }
             else
             {
