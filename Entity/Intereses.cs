@@ -16,6 +16,9 @@ namespace Entity
             dias = 0;
             meses = 0;
             años = 0;
+            Trimestral = 0;
+            Semestral = 0;
+            Cuatrimestral = 0;
         }
         public float TasaDeInteres { get; set; }
         public float CapitalInicial { get; set; }
@@ -23,6 +26,9 @@ namespace Entity
         public float dias { get; set; }
         public float meses { get; set; }
         public float años { get; set; }
+        public float Trimestral { get; set; }
+        public float Cuatrimestral { get; set; }
+        public float Semestral { get; set; }
 
     }
 }
