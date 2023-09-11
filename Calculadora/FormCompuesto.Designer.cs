@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.comboBoxSelector = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxAños = new System.Windows.Forms.TextBox();
             this.textBoxMeses = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.labelTasaInteres = new System.Windows.Forms.Label();
             this.textBoxTasaInteres = new System.Windows.Forms.TextBox();
             this.labelTiempo = new System.Windows.Forms.Label();
-            this.comboBoxSelector = new System.Windows.Forms.ComboBox();
             this.panelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,24 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(977, 576);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // comboBoxSelector
+            // 
+            this.comboBoxSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelector.FormattingEnabled = true;
+            this.comboBoxSelector.Items.AddRange(new object[] {
+            "Diario",
+            "Mensual",
+            "Anual",
+            "Diario-Mensual-Anual",
+            "Trimestral",
+            "Cuatrimestral",
+            "Semestral"});
+            this.comboBoxSelector.Location = new System.Drawing.Point(145, 117);
+            this.comboBoxSelector.Name = "comboBoxSelector";
+            this.comboBoxSelector.Size = new System.Drawing.Size(69, 21);
+            this.comboBoxSelector.TabIndex = 41;
+            this.comboBoxSelector.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelector_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -136,7 +154,7 @@
             // labelMeses
             // 
             this.labelMeses.AutoSize = true;
-            this.labelMeses.Location = new System.Drawing.Point(73, 197);
+            this.labelMeses.Location = new System.Drawing.Point(73, 194);
             this.labelMeses.Name = "labelMeses";
             this.labelMeses.Size = new System.Drawing.Size(38, 13);
             this.labelMeses.TabIndex = 31;
@@ -166,11 +184,11 @@
             // labelValorFinal
             // 
             this.labelValorFinal.AutoSize = true;
-            this.labelValorFinal.Location = new System.Drawing.Point(580, 92);
+            this.labelValorFinal.Location = new System.Drawing.Point(567, 92);
             this.labelValorFinal.Name = "labelValorFinal";
-            this.labelValorFinal.Size = new System.Drawing.Size(56, 13);
+            this.labelValorFinal.Size = new System.Drawing.Size(93, 13);
             this.labelValorFinal.TabIndex = 28;
-            this.labelValorFinal.Text = "Valor Final";
+            this.labelValorFinal.Text = "Monto Compuesto";
             // 
             // textBoxValorFinal
             // 
@@ -183,11 +201,11 @@
             // labelValorIncial
             // 
             this.labelValorIncial.AutoSize = true;
-            this.labelValorIncial.Location = new System.Drawing.Point(452, 92);
+            this.labelValorIncial.Location = new System.Drawing.Point(447, 92);
             this.labelValorIncial.Name = "labelValorIncial";
-            this.labelValorIncial.Size = new System.Drawing.Size(61, 13);
+            this.labelValorIncial.Size = new System.Drawing.Size(69, 13);
             this.labelValorIncial.TabIndex = 26;
-            this.labelValorIncial.Text = "Valor Inicial";
+            this.labelValorIncial.Text = "Capital Inicial";
             // 
             // textBoxValorIncial
             // 
@@ -217,29 +235,11 @@
             // labelTiempo
             // 
             this.labelTiempo.AutoSize = true;
-            this.labelTiempo.Location = new System.Drawing.Point(172, 92);
+            this.labelTiempo.Location = new System.Drawing.Point(158, 92);
             this.labelTiempo.Name = "labelTiempo";
             this.labelTiempo.Size = new System.Drawing.Size(42, 13);
             this.labelTiempo.TabIndex = 22;
             this.labelTiempo.Text = "Tiempo";
-            // 
-            // comboBoxSelector
-            // 
-            this.comboBoxSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSelector.FormattingEnabled = true;
-            this.comboBoxSelector.Items.AddRange(new object[] {
-            "Diario",
-            "Mensual",
-            "Anual",
-            "Diario-Mensual-Anual",
-            "Trimestral",
-            "Cuatrimestral",
-            "Semestral"});
-            this.comboBoxSelector.Location = new System.Drawing.Point(145, 117);
-            this.comboBoxSelector.Name = "comboBoxSelector";
-            this.comboBoxSelector.Size = new System.Drawing.Size(69, 21);
-            this.comboBoxSelector.TabIndex = 41;
-            this.comboBoxSelector.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelector_SelectedIndexChanged);
             // 
             // FormCompuesto
             // 

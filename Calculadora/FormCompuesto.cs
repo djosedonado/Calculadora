@@ -13,13 +13,13 @@ namespace Calculadora
 {
     public partial class FormCompuesto : Form
     {
-        public InteresSimple calcular;
+        public InteresCompuesto calcular;
         public ValidacionCampos validacionCampos;
         public FormCompuesto()
         {
             InitializeComponent();
             validacionCampos = new ValidacionCampos();
-            calcular = new InteresSimple();
+            calcular = new InteresCompuesto();
             CamposInicio();
         }
 
@@ -76,7 +76,9 @@ namespace Calculadora
                 calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
                 calcular.Interes = float.Parse(textBoxValorFinal.Text);
             }
-
+            calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
+            calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
+            calcular.Interes = float.Parse(textBoxValorFinal.Text);
         }
 
         private void CamposInicio()
@@ -92,14 +94,9 @@ namespace Calculadora
         {
             if (textBoxValorIncial.Text != "" && textBoxValorFinal.Text != "" && textBoxTasaInteres.Text != "" && textBoxDias.Text != "" && textBoxMeses.Text != "" && textBoxAños.Text != "")
             {
-                calcular.dias = int.Parse(textBoxDias.Text);
-                calcular.meses = int.Parse(textBoxMeses.Text);
-                calcular.años = int.Parse(textBoxAños.Text);
-                calcular.TasaDeInteres = float.Parse(textBoxTasaInteres.Text);
-                calcular.CapitalInicial = float.Parse(textBoxValorIncial.Text);
-                calcular.Interes = float.Parse(textBoxValorFinal.Text);
+                VariablesEntradas();
                 labelValor.Visible = true;
-                labelValor.Text = 0.ToString();
+                labelValor.Text = calcular.interesCompuesto();
             }
             else
             {
