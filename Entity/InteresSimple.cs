@@ -9,11 +9,6 @@ namespace Entity
 {
     public class InteresSimple : Intereses
     {
-        public double CalcularInteresCompuesto()
-        {
-            return 0;
-        }
-
         public string CalcularInteresSimple()
         {
             if (dias != 0 && meses != 0 && años != 0)
@@ -172,13 +167,39 @@ namespace Entity
                                     }
                                     else
                                     {
-                                        if ((Interes == 0 || CapitalInicial == 0) || (Interes == 0 || TasaDeInteres == 0) || (CapitalInicial == 0 || TasaDeInteres == 0))
+                                        if(Trimestral != 0)
                                         {
-                                            return "No se Puede Calcular el Tiempo por Favor llene los campos";
+                                            if (TasaDeInteres != 0 && CapitalInicial != 0)
+                                            {
+                                                return CalcularInteres();// Interes
+                                            }
+                                            if (CapitalInicial != 0 && Interes != 0)
+                                            {
+                                                return CalcularTasaDeInteres();//tasa interes
+                                            }
+                                            if (TasaDeInteres != 0 && Interes != 0)
+                                            {
+                                                return CalcularCapitalInicial();// capital Inicial
+                                            }
+                                            return "Error Sector trimestre"; 
                                         }
                                         else
                                         {
-                                            return CalcularTiempo();
+                                            if (Cuatrimestral != 0)
+                                            {
+                                                return "Error Sector cuatrimestre"; // mantenimiento
+                                            }
+                                            else
+                                            {
+                                                if (Semestral != 0)
+                                                {
+                                                    return "";//mantenimiento
+                                                }
+                                                else
+                                                {
+                                                    return CalcularTiempo();//calculando el tiempo 
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -193,6 +214,18 @@ namespace Entity
         private string CalcularTasaDeInteres()//Calculo General De Tasa de Interes
         {
             float i = (float)(Interes / (CapitalInicial * (años + (meses / 12) + (dias / 365)))) * 100;
+            if (Trimestral != 0)
+            {
+                i = (float)(Interes / (CapitalInicial * (((Trimestral * 3) / 12)))) * 100;
+            }
+            if (Cuatrimestral != 0)
+            {
+                i = (float)(Interes / (CapitalInicial * (((Cuatrimestral * 4) / 12)))) * 100;
+            }
+            if (Semestral != 0)
+            {
+                i = (float)(Interes / (CapitalInicial * (((Semestral * 6) / 12)))) * 100;
+            }
             return "La Tasa De Interes Es De: " + i + " %";
         }
         private string CalcularCapitalInicial()//Metodo General de Capital Inicial
@@ -205,6 +238,18 @@ namespace Entity
         private string CalcularInteres()//Metodo General de Interes
         {
             float i = (CapitalInicial * (TasaDeInteres / 100) * (años + (meses / 12) + (dias / 360)));
+            if (Trimestral != 0)
+            {
+                i = (CapitalInicial * (TasaDeInteres / 100) * (((Trimestral * 3) / 12)));
+            }
+            if (Cuatrimestral != 0)
+            {
+                i = (CapitalInicial * (TasaDeInteres / 100) * (((Trimestral * 4) / 12)));
+            }
+            if (Semestral != 0)
+            {
+                i = (CapitalInicial * (TasaDeInteres / 100) * (((Trimestral * 6) / 12)));
+            }
             return "El Interes es De: " + i;
         }
 
@@ -213,6 +258,18 @@ namespace Entity
             float t = 0;
             //t = años + (((meses * 30) + (dias / 30)) / 365);
             t = años + ((meses * 30) / 360) + (dias / 360);
+            if (Trimestral != 0)
+            {
+                t = (((Trimestral * 3) * 30) / 360);
+            }
+            if (Cuatrimestral != 0)
+            {
+                t = (((Cuatrimestral * 4) * 30) / 360);
+            }
+            if (Semestral != 0)
+            {
+                t = (((Semestral * 6) * 30) / 360);
+            }
             return t;
         }
 
