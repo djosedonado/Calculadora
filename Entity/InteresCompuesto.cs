@@ -177,23 +177,101 @@ namespace Entity
             Semestral = 0;
             Cuatrimestral = 0;
         }
-        private string CalcularCapitalInicial()
+        private string CalcularCapitalInicial()//Metodo Completado
         {
-            float time = (años * 12) + (meses) + (dias / 365);
+            float time = (años) + (meses / 12) + (dias / 365);
             float C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            if (dias != 0 && meses != 0 && años != 0)
+            {
+                time = (años + (meses / 12) + (dias / 365));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (dias != 0 && meses != 0 && años == 0)
+            {
+                time = ((meses / 12) + (dias / 365));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (dias != 0 && meses == 0 && años != 0)
+            {
+                time = (años + (dias / 365));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (dias == 0 && meses != 0 && años != 0)
+            {
+                time = (años + (meses / 12));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (Trimestral != 0)
+            {
+                time = (((Trimestral * 3) / 12));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (Cuatrimestral != 0)
+            {
+                time = (((Cuatrimestral * 4) / 12));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+            if (Semestral != 0)
+            {
+                time = (((Semestral * 6) / 12));
+                C = (float)(Interes / Math.Pow((1 + (TasaDeInteres / 100)), time));
+            }
+
             LimpiarVariable();
-            return "El Capital Inicial es De: " + Math.Round(C, 2);
+            //return "El Capital Inicial es De: " + Math.Round(C, 2);
+            return " "+time + " "+C;
         }
-        private string CalcularMontoCompuesto()
+        private string CalcularMontoCompuesto()//Metodo Completado
         {
 
             float time = (años) + (meses) + (dias / 365);
-            float MC = (float)(CapitalInicial * (Math.Pow((1 + TasaDeInteres / 100), time)));
+            float tasa = TasaDeInteres / 100;
+            if (años != 0 && meses != 0 && dias == 0)
+            {
+                time = (((años * 12) + meses) / 12) * 12;
+                tasa = (tasa / 12);
+            }
+            if (dias != 0 && meses != 0 && años == 0)
+            {
+                time = (((dias / 30) + meses) / 12) * 12;
+                tasa = (tasa / 12);
+
+            }
+            if (dias != 0 && meses != 0 && años != 0)
+            {
+                time = (((dias / 30) + meses + (años * 12)) / 12) * 12;
+                tasa = (tasa / 12);
+            }
+            if (dias != 0 && años != 0 && meses == 0)
+            {
+                time = (((dias / 30) + (años * 12)) / 12) * 12;
+                tasa = (tasa / 12);
+            }
+            if (Trimestral != 0)
+            {
+                time = (((Trimestral * 3) / 12) * 12);
+                tasa = (tasa / 12);
+
+            }
+            if (Cuatrimestral != 0)
+            {
+                time = (((Cuatrimestral * 4) / 12) * 12);
+                tasa = (tasa / 12);
+
+            }
+            if (Semestral != 0)
+            {
+                time = (((Semestral * 6) / 12) * 12);
+                tasa = (tasa / 12);
+
+            }
+
+            float MC = (float)(CapitalInicial * (Math.Pow((1 + tasa), time)));
             LimpiarVariable();
             return "El Monto Compuesto es De: " + Math.Round(MC,2);
         }
 
-        private string CalcularTiempo()
+        private string CalcularTiempo()//Metodo Completado
         {
             float divisor = (float)Math.Log10(1 + TasaDeInteres / 100);
             float dividendo_1 = (float)(Math.Log10(Interes));
@@ -204,14 +282,49 @@ namespace Entity
             return "El tiempo es De: " + Math.Round(cociente,2);
         }
 
-        private string CalcularTasaInteres()
+        private string CalcularTasaInteres()//Metodo Completado
         {
             float time = (años) + (meses) + (dias / 365);
             float bases = (Interes / CapitalInicial);
             float exponente = (1 / time);
-            float tasa = (float) (Math.Pow(bases, exponente) - 1) * 100;
+            float tasa = (float)(Math.Pow(bases, exponente) - 1) * 100;
+            if (dias != 0 && meses != 0 && años != 0)
+            {
+                time = (1 / ((años + (meses / 12) + (dias / 365)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (dias != 0 && meses != 0 && años == 0)
+            {
+                time = (1 / (((meses / 12) + (dias / 365)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (dias != 0 && meses == 0 && años != 0)
+            {
+                time = (1 / ((años + (dias / 365)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (dias == 0 && meses != 0 && años != 0)
+            {
+                time = (1 / ((años + (meses / 12)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (Trimestral != 0)
+            {
+                time = (1 / ((((Trimestral * 3) / 12)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (Cuatrimestral != 0)
+            {
+                time = (1 / ((((Cuatrimestral * 4) / 12)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
+            if (Semestral != 0)
+            {
+                time = (1 / ((((Cuatrimestral * 6) / 12)) * 12));
+                tasa = (float)((Math.Pow(bases, time) - 1) * 12) * 100;
+            }
             LimpiarVariable();
-            return "La Tasa de Interes es De: " + Math.Round(tasa,1) + "%";
+            return "La Tasa de Interes es De: " + Math.Round(tasa,2) + "%";
         }
 
     }
