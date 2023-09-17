@@ -45,5 +45,13 @@ namespace Calculadora
         {
             abrirFormatoHija(new FormCompuesto());
         }
+
+        private void buttonSimple_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void buttonSimple_MouseLeave(object sender, EventArgs e)
+        {
+        }
     }
 }

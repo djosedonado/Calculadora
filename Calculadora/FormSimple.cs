@@ -120,7 +120,7 @@ namespace Calculadora
             else
             {
                 CamposInicio();
-                MessageBox.Show("Debe llenar al menos un campo", "Alterta", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Debe llenar al menos un campo", "Alerta", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             
         }
@@ -212,6 +212,11 @@ namespace Calculadora
                 labelMeses.Visible = false;
                 labelAños.Visible = false;
             }
+        }
+
+        private void labelValor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

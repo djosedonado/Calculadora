@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrimary));
             this.panelPrimary = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelButton = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,6 +41,8 @@
             this.panelImage = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPrimary.SuspendLayout();
+            this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelImage.SuspendLayout();
@@ -60,11 +63,22 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.pictureBox2);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(200, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(892, 607);
             this.panelContainer.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Calculadora.Properties.Resources.contabilidad;
+            this.pictureBox2.Location = new System.Drawing.Point(112, 73);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(596, 432);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panelMenu
             // 
@@ -92,6 +106,10 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 126);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 42);
@@ -103,6 +121,10 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(0, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 42);
@@ -114,6 +136,10 @@
             // buttonCompuesto
             // 
             this.buttonCompuesto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCompuesto.FlatAppearance.BorderSize = 0;
+            this.buttonCompuesto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.buttonCompuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCompuesto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompuesto.Location = new System.Drawing.Point(0, 42);
             this.buttonCompuesto.Name = "buttonCompuesto";
             this.buttonCompuesto.Size = new System.Drawing.Size(200, 42);
@@ -125,6 +151,10 @@
             // buttonSimple
             // 
             this.buttonSimple.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSimple.FlatAppearance.BorderSize = 0;
+            this.buttonSimple.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.buttonSimple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSimple.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimple.Location = new System.Drawing.Point(0, 0);
             this.buttonSimple.Name = "buttonSimple";
             this.buttonSimple.Size = new System.Drawing.Size(200, 42);
@@ -132,6 +162,8 @@
             this.buttonSimple.Text = "Interes Simple";
             this.buttonSimple.UseVisualStyleBackColor = true;
             this.buttonSimple.Click += new System.EventHandler(this.buttonSimple_Click);
+            this.buttonSimple.MouseLeave += new System.EventHandler(this.buttonSimple_MouseLeave);
+            this.buttonSimple.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonSimple_MouseMove);
             // 
             // panelImage
             // 
@@ -162,6 +194,8 @@
             this.Name = "FormPrimary";
             this.Text = "Form1";
             this.panelPrimary.ResumeLayout(false);
+            this.panelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelImage.ResumeLayout(false);
@@ -182,6 +216,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

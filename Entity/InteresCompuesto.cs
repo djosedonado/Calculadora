@@ -218,8 +218,8 @@ namespace Entity
             }
 
             LimpiarVariable();
-            //return "El Capital Inicial es De: " + Math.Round(C, 2);
-            return " "+time + " "+C;
+            return "El Capital Inicial es De: " + Math.Round(C, 2);
+
         }
         private string CalcularMontoCompuesto()//Metodo Completado
         {

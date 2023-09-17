@@ -96,7 +96,7 @@ namespace Entity
                                 //Capital Inicial
                                 return CalcularCapitalInicial();
                             }
-                            return "Error Setor Años y Meses";
+                            return "Error Sector Años y Meses";
                         }
                         else
                         {
@@ -187,13 +187,37 @@ namespace Entity
                                         {
                                             if (Cuatrimestral != 0)
                                             {
+                                                if (TasaDeInteres != 0 && CapitalInicial != 0)
+                                                {
+                                                    return CalcularInteres();// Interes
+                                                }
+                                                if (CapitalInicial != 0 && Interes != 0)
+                                                {
+                                                    return CalcularTasaDeInteres();//tasa interes
+                                                }
+                                                if (TasaDeInteres != 0 && Interes != 0)
+                                                {
+                                                    return CalcularCapitalInicial();// capital Inicial
+                                                }
                                                 return "Error Sector cuatrimestre"; // mantenimiento
                                             }
                                             else
                                             {
                                                 if (Semestral != 0)
                                                 {
-                                                    return "";//mantenimiento
+                                                    if (TasaDeInteres != 0 && CapitalInicial != 0)
+                                                    {
+                                                        return CalcularInteres();// Interes
+                                                    }
+                                                    if (CapitalInicial != 0 && Interes != 0)
+                                                    {
+                                                        return CalcularTasaDeInteres();//tasa interes
+                                                    }
+                                                    if (TasaDeInteres != 0 && Interes != 0)
+                                                    {
+                                                        return CalcularCapitalInicial();// capital Inicial
+                                                    }
+                                                    return "Error Sector Semestre";//mantenimiento
                                                 }
                                                 else
                                                 {
@@ -207,6 +231,7 @@ namespace Entity
                         }
                     }
                 }
+
             }
         }
 
@@ -226,11 +251,13 @@ namespace Entity
             {
                 i = (float)(Interes / (CapitalInicial * (((Semestral * 6) / 12)))) * 100;
             }
+            LimpiarVariable();
             return "La Tasa De Interes Es De: " + i + " %";
         }
         private string CalcularCapitalInicial()//Metodo General de Capital Inicial
         {
             float p = (Interes / ((TasaDeInteres / 100) * ConversionPorDias()));
+            LimpiarVariable();
             return " El Capital Inicial es De: " + p;
             //return ConversionPorDias().ToString();
         }
@@ -250,6 +277,7 @@ namespace Entity
             {
                 i = (CapitalInicial * (TasaDeInteres / 100) * (((Trimestral * 6) / 12)));
             }
+            LimpiarVariable();
             return "El Interes es De: " + i;
         }
 
@@ -281,6 +309,18 @@ namespace Entity
             int mes = (int)(aux);
             int dia = (int)(((aux) - mes) * 30);
             return anos + " Año " + mes + " Meses " + dia + " Dias";
+        }
+        private void LimpiarVariable()
+        {
+            TasaDeInteres = 0;
+            CapitalInicial = 0;
+            Interes = 0;
+            dias = 0;
+            meses = 0;
+            años = 0;
+            Trimestral = 0;
+            Semestral = 0;
+            Cuatrimestral = 0;
         }
     }
 }
