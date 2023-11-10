@@ -109,7 +109,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 126);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 42);
@@ -124,14 +124,14 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(0, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 42);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button1";
+            this.button2.Text = "Tir";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonCompuesto
             // 
@@ -139,7 +139,7 @@
             this.buttonCompuesto.FlatAppearance.BorderSize = 0;
             this.buttonCompuesto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonCompuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCompuesto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCompuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCompuesto.Location = new System.Drawing.Point(0, 42);
             this.buttonCompuesto.Name = "buttonCompuesto";
             this.buttonCompuesto.Size = new System.Drawing.Size(200, 42);
@@ -154,7 +154,7 @@
             this.buttonSimple.FlatAppearance.BorderSize = 0;
             this.buttonSimple.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonSimple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSimple.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimple.Location = new System.Drawing.Point(0, 0);
             this.buttonSimple.Name = "buttonSimple";
             this.buttonSimple.Size = new System.Drawing.Size(200, 42);

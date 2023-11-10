@@ -53,5 +53,10 @@ namespace Calculadora
         private void buttonSimple_MouseLeave(object sender, EventArgs e)
         {
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new FormTir());
+        }
     }
 }
