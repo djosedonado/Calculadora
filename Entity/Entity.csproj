@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BonosDeInteres.cs" />
     <Compile Include="InteresCompuesto.cs" />
     <Compile Include="InteresSimple.cs" />
     <Compile Include="Intereses.cs" />

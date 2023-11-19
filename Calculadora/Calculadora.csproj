@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBonosInteres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBonosInteres.Designer.cs">
+      <DependentUpon>FormBonosInteres.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCompuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidacionCampos.cs" />
+    <EmbeddedResource Include="FormBonosInteres.resx">
+      <DependentUpon>FormBonosInteres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCompuesto.resx">
       <DependentUpon>FormCompuesto.cs</DependentUpon>
     </EmbeddedResource>

@@ -34,7 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelButton = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonBonosInteres = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonCompuesto = new System.Windows.Forms.Button();
             this.buttonSimple = new System.Windows.Forms.Button();
@@ -93,7 +93,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Controls.Add(this.button3);
+            this.panelButton.Controls.Add(this.buttonBonosInteres);
             this.panelButton.Controls.Add(this.button2);
             this.panelButton.Controls.Add(this.buttonCompuesto);
             this.panelButton.Controls.Add(this.buttonSimple);
@@ -103,20 +103,20 @@
             this.panelButton.Size = new System.Drawing.Size(200, 507);
             this.panelButton.TabIndex = 2;
             // 
-            // button3
+            // buttonBonosInteres
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 126);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
+            this.buttonBonosInteres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonBonosInteres.FlatAppearance.BorderSize = 0;
+            this.buttonBonosInteres.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.buttonBonosInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBonosInteres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBonosInteres.Location = new System.Drawing.Point(0, 126);
+            this.buttonBonosInteres.Name = "buttonBonosInteres";
+            this.buttonBonosInteres.Size = new System.Drawing.Size(200, 42);
+            this.buttonBonosInteres.TabIndex = 3;
+            this.buttonBonosInteres.Text = "Bonos de Interes";
+            this.buttonBonosInteres.UseVisualStyleBackColor = true;
+            this.buttonBonosInteres.Click += new System.EventHandler(this.buttonBonosInteres_Click);
             // 
             // button2
             // 
@@ -212,7 +212,7 @@
         private System.Windows.Forms.Panel panelButton;
         private System.Windows.Forms.Button buttonCompuesto;
         private System.Windows.Forms.Button buttonSimple;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonBonosInteres;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContainer;

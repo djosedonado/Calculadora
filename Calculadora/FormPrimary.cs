@@ -58,5 +58,10 @@ namespace Calculadora
         {
             abrirFormatoHija(new FormTir());
         }
+
+        private void buttonBonosInteres_Click(object sender, EventArgs e)
+        {
+            abrirFormatoHija(new FormBonosInteres());
+        }
     }
 }
