@@ -146,6 +146,7 @@
             this.textBoxTasa.Name = "textBoxTasa";
             this.textBoxTasa.Size = new System.Drawing.Size(100, 20);
             this.textBoxTasa.TabIndex = 29;
+            this.textBoxTasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTasa_KeyPress);
             // 
             // buttonCalcular
             // 
@@ -190,6 +191,7 @@
             this.textBoxFnc2.Name = "textBoxFnc2";
             this.textBoxFnc2.Size = new System.Drawing.Size(100, 20);
             this.textBoxFnc2.TabIndex = 24;
+            this.textBoxFnc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFnc2_KeyPress);
             // 
             // label3
             // 
@@ -206,6 +208,7 @@
             this.textBoxFnc1.Name = "textBoxFnc1";
             this.textBoxFnc1.Size = new System.Drawing.Size(100, 20);
             this.textBoxFnc1.TabIndex = 22;
+            this.textBoxFnc1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFnc1_KeyPress);
             // 
             // label2
             // 
@@ -222,6 +225,7 @@
             this.textBoxCapitalInicial.Name = "textBoxCapitalInicial";
             this.textBoxCapitalInicial.Size = new System.Drawing.Size(100, 20);
             this.textBoxCapitalInicial.TabIndex = 20;
+            this.textBoxCapitalInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCapitalInicial_KeyPress);
             // 
             // label1
             // 

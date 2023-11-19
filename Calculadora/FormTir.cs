@@ -14,10 +14,12 @@ namespace Calculadora
     public partial class FormTir : Form
     {
         public readonly Tir tir;
+        public ValidacionCampos validacionCampos;
         public FormTir()
         {
             InitializeComponent();
             ValorInicial();
+            validacionCampos = new ValidacionCampos();
             tir = new Tir();
         }
         private void ValorInicial()
@@ -37,6 +39,26 @@ namespace Calculadora
             labelResultadoPresente.Text = tir.calcularValorFuturo();
             labelResultadoTir.Text = tir.calacularTir();
             labelVanInteresCompuesto.Text = tir.calcularVanInicial();
+        }
+
+        private void textBoxCapitalInicial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
+        }
+
+        private void textBoxFnc1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
+        }
+
+        private void textBoxFnc2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
+        }
+
+        private void textBoxTasa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacionCampos.validacion(e, 2);
         }
     }
 }
