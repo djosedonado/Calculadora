@@ -224,8 +224,16 @@ namespace Entity
         private string CalcularMontoCompuesto()//Metodo Completado
         {
 
-            float time = (años) + (meses) + (dias / 365);
+            float time = 0;
             float tasa = TasaDeInteres / 100;
+            if (años != 0)
+            {
+                time = años * 12;
+                tasa = tasa / 12;
+            }
+            if (meses != 0) time = meses;
+            if(dias != 0) time = dias / 365;
+            
             if (años != 0 && meses != 0 && dias == 0)
             {
                 time = (((años * 12) + meses) / 12) * 12;
